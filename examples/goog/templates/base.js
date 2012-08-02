@@ -32,6 +32,9 @@ ojster.example.templates.Base.twistScore = function(value) {
 ojster.example.templates.Base.prototype.renderBlockMain = function() { // @18:1
 	var self = this;
 	var d = this.data, vars = this.vars;
+	self.writer.write(
+		goog.getMsg('Tom\'s ideas') // @19:5
+	); // @20:5
 
 		// within blocks you can freely define variables and functions
 		// they will be bound by generated method scope
@@ -45,6 +48,6 @@ ojster.example.templates.Base.prototype.renderBlockMain = function() { // @18:1
 		var Base = ojster.example.templates.Base;
 		// they will be visible within block
 
-	new ojster.example.templates.Tools.SomeTool(d).renderTo(self); // @33:5
-}; // @34:1
+	new ojster.example.templates.Tools.SomeTool(d).renderTo(self); // @34:5
+}; // @35:1
 

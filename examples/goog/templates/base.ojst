@@ -16,6 +16,7 @@ ojster.example.templates.Base.twistScore = function(value) {
 %>
 
 <% @block main { %>
+	<% @msg Tom's ideas %>
 	<%
 		// within blocks you can freely define variables and functions
 		// they will be bound by generated method scope
