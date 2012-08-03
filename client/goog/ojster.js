@@ -41,8 +41,8 @@ ojster.Template = function(opt_data, opt_ctx, opt_writer) {
 	this.writer = opt_writer || null;
 	/** @type {!Object} */
 	this.vars = {};
-	/** @type {?string} */
-	this.baseCssName = null;
+	/** @type {string} */
+	this.baseCssName = '';
 
 	this.init();
 };
@@ -51,7 +51,7 @@ ojster.Template.prototype.init = function() {
 };
 
 /**
- * @param {function(ojster.Template)} props
+ * @param {function(this:ojster.Template)} setupFunc
  */
 ojster.Template.prototype.setup = function(setupFunc) {
 	setupFunc.call(this);
@@ -59,14 +59,14 @@ ojster.Template.prototype.setup = function(setupFunc) {
 };
 
 /**
- * @return {?string}
+ * @return {string}
  */
-ojster.Template.prototype.getBaseCssName = function(setupFunc) {
+ojster.Template.prototype.getBaseCssName = function() {
 	return this.baseCssName;
 };
 
 /**
- * @param {?string} baseCssName
+ * @param {string} baseCssName
  */
 ojster.Template.prototype.setBaseCssName = function(baseCssName) {
 	this.baseCssName = baseCssName;
@@ -139,7 +139,7 @@ ojster.fillElement = function(element, template) {
 /**
  * @param {ojster.Template} template
  * @param {goog.dom.DomHelper=} opt_domHelper
- * @return {Element}
+ * @return {!Element}
  */
 ojster.createElement = function(template, opt_domHelper) {
 	/** @type {goog.dom.DomHelper} */
@@ -150,12 +150,12 @@ ojster.createElement = function(template, opt_domHelper) {
 
 	if (wrapper.childNodes.length == 1)
 	{
-		/** @type {Element} */
+		/** @type {Node} */
 		var firstChild = wrapper.firstChild;
 
 		if (firstChild.nodeType == goog.dom.NodeType.ELEMENT)
 		{
-			return firstChild;
+			return /** @type {!Element} */ (firstChild);
 		}
 	}
 
