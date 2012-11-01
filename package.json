@@ -10,23 +10,22 @@
 	"preferGlobal": true,
 	"private": false,
 	"dependencies": {
-		"async": ">= 0.1.9",
-		"optimist": ">= 0.2.3"
+		"async": "~0.1.9",
+		"optimist": "~0.2.3",
+		"nerr": "~0.0.1",
+		"ops": "~0.0.1"
 	},
 	"engines": {
 		"node": ">= 0.6.0"
 	},
 	"repository": "git://github.com/dimsmol/ojster",
 	"directories": {
-		"lib": "./lib",
-		"bin": "./bin",
-		"example": "./examples"
+		"lib": "lib",
+		"bin": "bin",
+		"example": "examples"
 	},
-	"main": "index",
+	"main": "lib",
 	"bin": {
-		"ojster": "./bin/ojster"
-	},
-	"scripts": {
-		"test": "make test"
+		"ojster": "bin/ojster"
 	}
 }

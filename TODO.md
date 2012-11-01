@@ -1,4 +1,14 @@
-# TODO
+* remove universal client generation - too dirty code
+* extract browserglobals to standalone class
+* split client library, provide amd and browserglobal versions separately
+* inherits - proper require needed for both amd and browserglobals
+* ignore whitespaces between require() for amd - use inplace schema?
+* improve node.js escape as for clients
+* change require schema for browserglobals (render in place)
+* fix export names for browserglobals, export in place
+
+* use args
+* use mkdirp
 
 * use Buffer instead of `[]` (?)
 
@@ -10,8 +20,6 @@
 * use generic Symbol token instead of Space
 
 * `make errors-generation` produces results in random order, do something with it
-
-* write generic generator for client-side (to use with jQuery, etc.)
 * write usage for `bin/ojster` (within the script)
 
 * fail with error in generator if some required component is not found (alias, path, etc.)
@@ -23,21 +31,11 @@
 * think about way to add common functionality to core by subclassing without need to create subclass for every kind of generator (node, goog, etc.)
 
 * TODOs in `path_compiler.js`
-* TODOs in `tools/fs.js`
-
-* think about way of using regular Array as writer
 
 * more error_examples
-* make tests (use examples and error_examples)
+* tests (use examples and error_examples)
 
-## modules
-
-* fix package.json
-* publish to npm
-* replace `optimist` with `nomnom`
-* use mkdirp instead of own implementation
-
-## readme.md
+## readme
 
 * add description for all commands
 * rewrite readme
