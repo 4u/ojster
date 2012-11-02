@@ -42,8 +42,8 @@ ojster.Template = function(opt_data, opt_ctx, opt_writer) {
   this.writer = opt_writer || null;
   /** @type {!Object} */
   this.vars = {};
-  /** @type {?string} */
-  this.baseCssName = null;
+  /** @type {string} */
+  this.baseCssName = '';
 
   this.init();
 };
@@ -52,7 +52,7 @@ ojster.Template.prototype.init = function() {
 };
 
 /**
- * @param {function(ojster.Template)} props
+ * @param {function(ojster.Template)} setupFunc
  */
 ojster.Template.prototype.setup = function(setupFunc) {
   setupFunc.call(this);
@@ -60,14 +60,14 @@ ojster.Template.prototype.setup = function(setupFunc) {
 };
 
 /**
- * @return {?string}
+ * @return {string}
  */
 ojster.Template.prototype.getBaseCssName = function() {
   return this.baseCssName;
 };
 
 /**
- * @param {?string} baseCssName
+ * @param {string} baseCssName
  */
 ojster.Template.prototype.setBaseCssName = function(baseCssName) {
   this.baseCssName = baseCssName;
