@@ -62,7 +62,7 @@ ojster.Template.prototype.setup = function(setupFunc) {
 /**
  * @return {?string}
  */
-ojster.Template.prototype.getBaseCssName = function(setupFunc) {
+ojster.Template.prototype.getBaseCssName = function() {
   return this.baseCssName;
 };
 
