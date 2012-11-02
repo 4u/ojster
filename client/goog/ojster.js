@@ -52,7 +52,7 @@ ojster.Template.prototype.init = function() {
 };
 
 /**
- * @param {function(ojster.Template)} setupFunc
+ * @param {function(ojster.Template=)} setupFunc
  */
 ojster.Template.prototype.setup = function(setupFunc) {
   setupFunc.call(this);
@@ -149,7 +149,7 @@ ojster.createElement = function(template, opt_domHelper) {
 
   if (wrapper.childNodes.length == 1) {
     /** @type {Element} */
-    var firstChild = /** @type {Element} */ (wrapper).firstChild;
+    var firstChild = /** @type {Element} */ (wrapper.firstChild);
 
     if (firstChild.nodeType == goog.dom.NodeType.ELEMENT) {
       return firstChild;
