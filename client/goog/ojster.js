@@ -149,7 +149,7 @@ ojster.createElement = function(template, opt_domHelper) {
 
   if (wrapper.childNodes.length == 1) {
     /** @type {Element} */
-    var firstChild = wrapper.firstChild;
+    var firstChild = /** @type {Element} */ (wrapper).firstChild;
 
     if (firstChild.nodeType == goog.dom.NodeType.ELEMENT) {
       return firstChild;
