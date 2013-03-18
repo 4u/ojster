@@ -52,7 +52,7 @@ ojster.Template.prototype.init = function () {
 };
 
 /**
- * @param {function (this: ojster.Template)} props
+ * @param {function (this: ojster.Template)} setupFunc
  */
 ojster.Template.prototype.setup = function (setupFunc) {
   setupFunc.call(this);
