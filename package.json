@@ -1,6 +1,6 @@
 {
 	"name": "ojster",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "Objective JavaScript Templater",
 	"keywords": ["template", "engine", "ojster", "ojst"],
 	"author": {
@@ -12,11 +12,12 @@
 	"dependencies": {
 		"async": "~0.1.9",
 		"optimist": "~0.2.3",
+		"marked_types": "~0.0.1",
 		"nerr": "~0.0.1",
 		"ops": "~0.0.1"
 	},
 	"engines": {
-		"node": ">= 0.6.0"
+		"node": ">=0.6.0"
 	},
 	"repository": "git://github.com/dimsmol/ojster",
 	"directories": {
