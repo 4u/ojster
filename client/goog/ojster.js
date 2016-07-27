@@ -4,6 +4,7 @@ goog.require('goog.string');
 goog.require('goog.dom');
 goog.require('goog.dom.NodeType');
 goog.require('goog.dom.TagName');
+goog.require('goog.html.SafeHtml');
 
 
 /**
@@ -166,5 +167,6 @@ ojster.createElement = function (template, opt_domHelper) {
  */
 ojster.createFragment = function (template, opt_domHelper) {
   var dom = opt_domHelper || goog.dom.getDomHelper();
-  return dom.htmlToDocumentFragment(template.render());
+  var html = goog.html.SafeHtml.htmlEscapePreservingNewlines(template.render());
+  return goog.dom.safeHtmlToNode(html);
 };
